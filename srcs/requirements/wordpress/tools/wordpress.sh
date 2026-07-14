@@ -7,6 +7,8 @@ DB_PASSWORD=$(cat /run/secrets/db_password)
 
 cd /var/www/wordpress
 
+sleep 10
+
 if [ ! -f "wp-settings.php" ]; then
     echo "Downloading WordPress..."
 
@@ -42,4 +44,4 @@ if [ ! -f "wp-settings.php" ]; then
         --allow-root
 fi
 
-exec php-fpm8.2 -F
+exec php-fpm8.4 -F

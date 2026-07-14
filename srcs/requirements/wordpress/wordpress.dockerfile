@@ -1,7 +1,7 @@
 FROM debian:trixie
 
 RUN apt-get update -y && apt-get upgrade -y \
-	&& apt-get install curl php8.2-fpm php8.2-mysql mariadb-client -y
+	&& apt-get install curl php8.4-fpm php8.4-mysql mariadb-client -y
 
 RUN mkdir -p /var/www/wordpress && mkdir -p /run/php
 
