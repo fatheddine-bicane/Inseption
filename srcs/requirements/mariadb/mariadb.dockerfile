@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:trixie
 
 RUN apt-get update -y && apt-get install mariadb-server mariadb-client -y
 
