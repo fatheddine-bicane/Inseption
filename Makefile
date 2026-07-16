@@ -4,8 +4,8 @@ DB_DATA = /home/fbicane/data/mariadb
 all: up
 
 up:
-	@mkdir -p $(WP_DATA)
-	@mkdir -p $(DB_DATA)
+	@sudo mkdir -p $(WP_DATA)
+	@sudo mkdir -p $(DB_DATA)
 	cd srcs && docker compose up -d --build
 
 down:
