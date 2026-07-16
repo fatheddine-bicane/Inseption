@@ -5,9 +5,9 @@ RUN apt-get update -y && apt-get upgrade -y \
 
 RUN mkdir -p /var/www/wordpress && mkdir -p /run/php
 
-COPY conf/www.conf /etc/php/8.2/fpm/pool.d/www.conf
+COPY conf/www.conf /etc/php/8.4/fpm/pool.d/www.conf
 COPY ./tools/wordpress.sh /usr/local/bin/wordpress.sh
-COPY conf/www.conf /etc/php/8.2/fpm/pool.d/www.conf
+COPY conf/www.conf /etc/php/8.4/fpm/pool.d/www.conf
 
 RUN chmod +x /usr/local/bin/wordpress.sh
 
