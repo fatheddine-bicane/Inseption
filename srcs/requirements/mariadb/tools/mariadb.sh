@@ -6,9 +6,7 @@ mkdir -p /run/mysqld
 chown -R mysql:mysql /run/mysqld
 
 if [ ! -d "/var/lib/mysql/$DATA_BASE" ]; then
-	mysql_install_db --user=mysql --datadir=/var/lib/mysql
 	service mariadb start
-
 	sleep 2
 
 	mariadb -e "CREATE DATABASE IF NOT EXISTS $DATA_BASE;"
