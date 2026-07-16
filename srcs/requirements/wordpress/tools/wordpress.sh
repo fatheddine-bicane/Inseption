@@ -48,4 +48,4 @@ fi
 #ensure correct permissions for nginx to read the populated files
 chown -R www-data:www-data /var/www/wordpress
 
-exec /usr/sbin/php-fpm8.4 -F
+exec php-fpm8.4 -F
