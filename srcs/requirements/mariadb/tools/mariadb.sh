@@ -13,8 +13,6 @@ if [ ! -d "/var/lib/mysql/$DATA_BASE" ]; then
 
 	mariadb -e "CREATE DATABASE IF NOT EXISTS $DATA_BASE;"
 	mariadb -e "CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$DB_PASSWORD';"
-
-	# 2. Correctly assign privileges to the specific remote user profile
 	mariadb -e "GRANT ALL PRIVILEGES ON $DATA_BASE.* TO '$DB_USER'@'%';"
 	mariadb -e "FLUSH PRIVILEGES;"
 
